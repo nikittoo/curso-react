@@ -1,11 +1,16 @@
-import Boton from "./componentes/boton"
+
+import Navbar from "./componentes/navbar/navbar"
 
 const App = () => {
+
+  function saludarConMiNombre() {
+    console.log("Hola, mi nombre es Nicolas Racca")
+  }
+
+
   return (
     <>
-      <h1>Hola Mundo!</h1>
-      <Boton /> 
-      <Boton /> {/* Otra forma de inicializarlo es: <Boton></Boton> */}
+      <Navbar />
     </>
   )
 }
