@@ -1,5 +1,6 @@
 
 import Navbar from "./componentes/navbar/navbar"
+import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer"
 
 const App = () => {
 
@@ -11,6 +12,7 @@ const App = () => {
   return (
     <>
       <Navbar />
+      <ItemListContainer mensajeBienvenida="¡Bienvenida a la tienda!" />
     </>
   )
 }

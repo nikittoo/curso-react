@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-const Contador = ({limite}) => {
+const CartWidget = ({limite}) => {
     const [contador, setContador] = useState(0)
 
     // recordar crear funciones auxiliares
@@ -12,7 +12,7 @@ const Contador = ({limite}) => {
     }
 
     const quitar = () => {
-        if (contador > 1){
+        if (contador > 0){
             setContador(contador - 1)
         } 
     }
@@ -26,4 +26,4 @@ const Contador = ({limite}) => {
     )
 }
 
-export default Contador
+export default CartWidget

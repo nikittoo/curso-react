@@ -1,6 +1,6 @@
 import Boton from "../boton/boton"
 import Titulo from "../titulo/titulo"
-import Contador from "../contador/contador"
+import CartWidget from "../CartWidget/CartWidget"
 import "./navbar.css"
 
 const Navbar = () => {
@@ -18,7 +18,7 @@ const Navbar = () => {
             </div>
 
             <div className="carrito">
-                <Contador limite={10} />
+                <CartWidget limite={10} />
             </div>
             
         </nav>
