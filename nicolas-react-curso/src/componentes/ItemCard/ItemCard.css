@@ -1,0 +1,13 @@
+.itemCard {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.itemCard img {
+    max-width: 100%;
+    height: auto;
+}
