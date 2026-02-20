@@ -2,3 +2,10 @@
   padding: 20px;
   text-align: center;
 }
+
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 16px;
+}
