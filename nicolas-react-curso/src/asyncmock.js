@@ -1,6 +1,6 @@
 const productosMock = [
-    { id: 1, titulo: "Producto 1", precio: 100, imagen: "/imagenes/Objeto1.jpg", descripcion: "Sticker de Messi", category: "deportes" },
-    { id: 2, titulo: "Producto 2", precio: 200, imagen: "/imagenes/Objeto2.jpg", descripcion: "Sticker pinceles", category: "arte" }
+    { id: 1, titulo: "Producto 1", precio: 100, imagen: "/imagenes/Objeto1.jpg", descripcion: "Sticker de Messi", category: "deportes", stock: 5 },
+    { id: 2, titulo: "Producto 2", precio: 200, imagen: "/imagenes/Objeto2.jpg", descripcion: "Sticker pinceles", category: "arte", stock: 10 }
 ]
 
 export const obtenerProductos = () => {

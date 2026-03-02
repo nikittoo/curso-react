@@ -1,0 +1,32 @@
+.checkout {
+    padding: 20px;
+}
+
+.checkout-summary {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkout-form label {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.checkout-form button {
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}

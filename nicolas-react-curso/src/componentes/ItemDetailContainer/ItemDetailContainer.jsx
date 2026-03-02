@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import "./ItemDetailContainer.css"
 import ItemDetail from "../ItemDetail/ItemDetail"
-import { getProductById } from "../../asyncmock"
+import { getProductById } from "../../Services/firestoreService"
 
 const ItemDetailContainer = () => {
     const { id } = useParams()
@@ -11,15 +11,17 @@ const ItemDetailContainer = () => {
     const [cargando, setCargando] = useState(true)
 
     useEffect(() => {
-        getProductById(id)
-            .then(data => {
+        const fetchProducto = async () => {
+            try {
+                const data = await getProductById(id)
                 setProducto(data)
                 setCargando(false)
-            })
-            .catch(error => {
+            } catch (error) {
                 console.error(error)
                 setCargando(false)
-            })
+            }
+        }
+        fetchProducto()
     }, [id])
 
     if (cargando) {

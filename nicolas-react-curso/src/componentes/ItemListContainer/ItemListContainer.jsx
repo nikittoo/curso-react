@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import "./ItemListContainer.css"
 import ItemList from "../ItemList/ItemList"
-import { obtenerProductos, getProductsByCategory } from "../../asyncmock"
+import { getProducts, getProductsByCategory } from "../../Services/firestoreService"
 
 const ItemListContainer = ({ mensajeBienvenida }) => {
     const { categoryId } = useParams()
@@ -12,16 +12,17 @@ const ItemListContainer = ({ mensajeBienvenida }) => {
     const mensaje = categoryId ? `Productos de categoría ${categoryId}` : mensajeBienvenida
 
     useEffect(() => {
-        const fetchProductos = categoryId ? getProductsByCategory(categoryId) : obtenerProductos()
-        fetchProductos
-            .then(data => {
+        const fetchProductos = async () => {
+            try {
+                const data = categoryId ? await getProductsByCategory(categoryId) : await getProducts()
                 setProductos(data)
                 setCargando(false)
-            })
-            .catch(error => {
+            } catch (error) {
                 console.error(error)
                 setCargando(false)
-            })
+            }
+        }
+        fetchProductos()
     }, [categoryId])
 
     if (cargando) {

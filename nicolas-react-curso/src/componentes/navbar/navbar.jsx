@@ -17,10 +17,14 @@ const Navbar = () => {
                 <Link to="/category/deportes" className="nav-link">Deportes</Link>
                 <Link to="/category/arte" className="nav-link">Arte</Link>
                 <Link to="/contacto" className="nav-link">Contacto</Link>
+                <Link to="/cart" className="nav-link">Carrito</Link>
+                <Link to="/checkout" className="nav-link">Checkout</Link>
             </div>
 
             <div className="carrito">
-                <CartWidget limite={10} />
+                <Link to="/cart">
+                    <CartWidget />
+                </Link>
             </div>
             
         </nav>
