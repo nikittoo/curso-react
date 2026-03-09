@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useCart } from '../../context/CartContext'
 import { Link } from 'react-router-dom'
-import { addOrder } from '../../Services/firestoreService'
+import { addOrder } from '../Services/firestoreService'
 import './Checkout.css'
 
 const Checkout = () => {

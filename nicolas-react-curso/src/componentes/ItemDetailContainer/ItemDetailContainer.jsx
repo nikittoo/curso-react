@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import "./ItemDetailContainer.css"
 import ItemDetail from "../ItemDetail/ItemDetail"
-import { getProductById } from "../../Services/firestoreService"
+import { getProductById } from "../Services/firestoreService"
 
 const ItemDetailContainer = () => {
     const { id } = useParams()
